@@ -28,15 +28,18 @@ Template.layout.helpers({
 
 // HOME TEMPLATES..
 Template.home.events({
-  'click .logout': function(event,tmpl) {
+  'click .go-to-listener-page': function(event,tmpl) {
+    window.location.href = 'http://localhost:3000/add-listener.html';
+  },
+  'click #logout': function(event,tmpl) {
       const apiPath = createCustomAPIPath('logout');
       fetch(apiPath, createPOSTRequestObj()).then(response => {
         if(response.status === 200 || response.status === 201) {
-          console.log(response)
+          console.log(response);
           return response.json();
         }
       }).then(response => {
-        console.log(response)
+        console.log(response);
         if(response.status === 'success') {
           // Remove the token from the actuall data..
           setItem('token',null);
@@ -46,7 +49,7 @@ Template.home.events({
           Meteor.logout();
         }
       }).catch(e => {
-
+        alert(e.message);
       });
   }
 });

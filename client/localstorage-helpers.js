@@ -10,5 +10,8 @@ export const setItem = (itemName,value) => {
 
 export const getItem = (itemName) => {
   const jsonStringifiedValue = localStorage.getItem(itemName);
+  if(jsonStringifiedValue == 'undefined') {
+    return null;
+  }
   return JSON.parse(jsonStringifiedValue);
 };

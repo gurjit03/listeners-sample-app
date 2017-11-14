@@ -4,15 +4,15 @@ import { Restivus } from 'meteor/nimble:restivus';
 import { Listeners } from '../../imports/collections/listeners';
 import { Api } from '../main.js';
 
-Api.addCollection(Listeners,{
-  authRequired: true,
-});
+// Api.addCollection(Listeners);
 
 // Path api/addListener
-Api.addRoute('/addListener',{authRequired: true},{
+Api.addRoute('add-listener', {authRequired: true}, {
   post: function() {
+    console.log('never reachign..');
     const userId = this.userId;
-    const user = Meteor.users(this.userId);
+    const user = Meteor.users.findOne(this.userId);
+    console.log(this.userId,user,"user...");
 
     // Add this user to the Listeners
     try{

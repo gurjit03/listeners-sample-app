@@ -31,10 +31,10 @@ Template.login.events({
         }
       }).then(response => {
         console.log(response.data,response);
-        const { userId, token } = response.data;
+        const { userId, authToken } = response.data;
 
         // Store the items on session variable
-        setItem('token',token);
+        setItem('token',authToken);
         setItem('userId',userId);
 
         Meteor.loginWithPassword(email,password,(err,res) => {
