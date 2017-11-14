@@ -9,6 +9,10 @@ Meteor.startup(() => {
     res.setHeader('Strict-Transport-Security', 'max-age=2592000; includeSubDomains'); // 2592000s / 30 days
     return next();
   });
+
+  Meteor.publish('allUsers',function() {
+    return Meteor.users.find();
+  })
 });
 
 export const Api = new Restivus({
