@@ -1,9 +1,13 @@
 <template name="layout">
   <div class="layout">
-    {{#if currentUser}}
-      {{>Template.dynamic content='login'}}
+    {{#if notLoggedIn}}
+      {{>Template.dynamic template=content}}
     {{else}}
-      {{>Template.dynamic content=template}}
+      {{#if currentUser}}
+        {{>Template.dynamic template='home'}}
+      {{else}}
+        {{>Template.dynamic template='login'}}
+      {{/if}}
     {{/if}}
   </div>
 </template>

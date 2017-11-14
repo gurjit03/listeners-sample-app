@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 
-import { createCustomAPIPath } from './imports/api-path';
+import { createCustomAPIPath } from '../imports/api-path';
 import {createPOSTrequest , createGETrequest} from './fetch-request.js';
 
 import './login.html';

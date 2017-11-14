@@ -16,17 +16,15 @@ Api.addRoute('/addListener',{authRequired: true},{
 
     // Add this user to the Listeners
     try{
-      const listenerAdded = Listeners.insert({
-        user: user,
-        addedAt: new Date(),
-      });
-    }catch(e => {
+      const listenerAdded = Listeners.insert({ user: user, addedAt: new Date() });
+    }
+    catch(e) {
       console.log(e);
       return {
         statusCode: 500,
         message: e.message
       }
-    };
+    }
 
     return {
       statusCode: 201,
@@ -39,7 +37,7 @@ Api.addRoute('/showListeners',{authRequired: true}, {
   get: function() {
     try{
       const allListeners = Listeners.find({}).fetch();
-    }catch(e => {
+    }catch(e) {
       console.log(e);
       return {
         statusCode: 500,

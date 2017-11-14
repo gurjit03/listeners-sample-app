@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { Restivus } from 'meteor/nimble:Restivus';
+import { Restivus } from 'meteor/nimble:restivus';
 
 const connectHandler = WebApp.connectHandlers; // get meteor-core's connect-implementation
 

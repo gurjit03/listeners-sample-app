@@ -5,5 +5,5 @@ import { Api } from '../main.js';
 
 Api.addCollection(Meteor.users,{
   authRequired: true,
-  excludedEndpoints: ['getAll','delete','put']
+  excludedEndpoints: ['put','delete','patch']
 });
