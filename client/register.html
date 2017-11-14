@@ -1,0 +1,31 @@
+<template name="register">
+  <div class="register">
+    <h3>SIGNUP</h3>
+    <form class="register-form" action="#" >
+      <div class="register-form__elem__group">
+        <label for="username">
+          USERNAME:
+          <input type="text" name="username" class="username input--text" required>
+        </label>
+      </div>
+      <div class="register-form__elem__group">
+        <label for="email">
+          EMAIL:
+          <input type="email" name="email" class="email input--email" required>
+        </label>
+      </div>
+      <div class="register-form__elem__group">
+        <label for="password">
+          PASSWORD :
+          <input type="text" name="password" class="password input--password" required>
+        </label>
+      </div>
+      <div class="register-form__elem__group">
+        <input type="submit" name="submit" class="submit register-form--submit" value="submit">
+      </div>
+    </form>
+    <p>
+      <a href="/login">Login</a>
+    </p>
+  </div>
+</template>

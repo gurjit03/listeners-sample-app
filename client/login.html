@@ -1,0 +1,25 @@
+<template name="login">
+  <div class="login">
+    <h3 class="login--header">LOGIN</h3>
+    <form class="login-form" action="#" >
+      <div class="login-form__elem__group">
+        <label for="username">
+          USERNAME:
+          <input type="text" name="username" class="username input--text" required>
+        </label>
+      </div>
+      <div class="login-form__elem__group">
+        <label for="password">
+          PASSWORD :
+          <input type="text" name="password" class="password input--password" required>
+        </label>
+      </div>
+      <div class="login-form__elem__group">
+        <input type="submit" name="submit" class="submit login-form--submit" value="submit">
+      </div>
+    </form>
+  </div>
+  <p>
+    <a href="/sign-up">Sign Up</a>
+  </p>
+</template>

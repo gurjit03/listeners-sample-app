@@ -1,0 +1,9 @@
+<template name="layout">
+  <div class="layout">
+    {{#if currentUser}}
+      {{>Template.dynamic content='login'}}
+    {{else}}
+      {{>Template.dynamic content=template}}
+    {{/if}}
+  </div>
+</template>
