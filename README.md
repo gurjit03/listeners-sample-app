@@ -38,11 +38,11 @@ fetch(apiPath, mySignupRequest).then((response) => {
 
 3. For logining into the system, we need to do 2 steps.
 
-1. First is login to the API ( using the same username/email and password.) by making an api call to the
+- First is login to the API ( using the same username/email and password.) by making an api call to the
 `http://api-url/api/login`. login is the endpoint.
 ###IMP NOTE###: The call to the login endpoint returns authToken and userId which needs to be saved for next api calls from the authenticated user. These 2 things act as a authentication.
 
-2. Second is to login to the system using client side accounts password method `Meteor.loginWithPassword`, It is necessary because, Meteor Restivus is a server side method only. In order for you to use client side of the system you need to be logged in there.
+- Second is to login to the system using client side accounts password method `Meteor.loginWithPassword`, It is necessary because, Meteor Restivus is a server side method only. In order for you to use client side of the system you need to be logged in there.
 
 ```
 fetch(apiPath, myLoginRequest).then((response) => {
